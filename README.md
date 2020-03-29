@@ -1,1 +1,1 @@
-# shogiboard.js
+# Shogiboard
