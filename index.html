@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shogiboard.js demo</title>
+    <link rel="stylesheet" type="text/css" href="./css/Shogiboard.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/Shogiboard.js"></script>
+</head>
+<body style="padding:10px;background-color: #fffff5;">
+    <div id="shogi" style="width:900px; margin: auto;"></div>
+</body>
+<script type="text/javascript">
+    var board = new Shogiboard("shogi", {
+        draggable: true,
+        position: "8l/1l+R2P3/p2pBG1pp/kps1p4/Nn1P2G2/P1P1P2PP/1PS6/1KSG3+r1/LN2+p3L w Sbgn3p 124",
+        orientation: 'black',
+        sparePieces: false,
+        dropOffBoard: 'snapback',
+    });
+</script>
+</html>

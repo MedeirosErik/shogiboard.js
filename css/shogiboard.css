@@ -1,0 +1,153 @@
+ .shogiboard-clearfix {
+	clear: both;
+}
+
+.shogiboard-board * {
+	box-sizing: border-box;
+}
+
+.shogiboard-left {
+	float: left;
+}
+
+.shogiboard-right {
+	float: right;
+}
+
+.shogiboard-board-box {
+	display: inline-block;
+	background:	rgb(245, 196, 123); /* #d29d5c;*/
+	box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.35);
+	box-sizing: border-box;
+}
+
+.shogiboard-board {
+	border: 1px solid #111;
+	background: rgb(245, 196, 123); 
+}
+
+/*
+.shogiboard-board {
+	display: inline-block;
+	box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.35);
+	background:	rgb(245, 196, 123); 
+	padding: 17px;
+	outline: 1px solid #111;
+	outline-offset: -17px;
+}
+*/
+
+.shogiboard-board div:last-child .shogiboard-square {
+	border-bottom: none;
+}
+
+.shogiboard-board div .shogiboard-square:nth-last-child(2) {
+	border-right: none;
+}
+
+.shogiboard-square {
+	float: left;
+	position: relative;
+	border-right: 1px solid #111;
+	border-bottom: 1px solid #111;
+	user-select: none;
+}
+
+.shogiboard-square img {
+	/*Padding to deal match square border*/
+    padding-right: 1px;
+    padding-bottom: 1px;
+}
+
+.shogiboard-board .shogiboard-piece, .shogiboard-hand-board .shogiboard-piece {
+	cursor: grab;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shogiboard-piece {
+	filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.35));
+	cursor: grab;
+	padding: 2px;
+}
+
+body > .shogiboard-piece {
+	filter: drop-shadow(0px 4px 6px rgb(0, 0, 0));
+	cursor: grabbing;
+}
+
+/*
+.shogiboard-piece.flipped {
+	transform: translate(-50%, -50%) rotate(180deg);
+	filter: drop-shadow(0px -4px 6px rgba(0,0,0,0.35));
+}
+*/
+
+.shogiboard-dots {
+	top: -3px; 
+	left: -3px;
+	border: 2.5px solid #111;
+	border-radius: 100%; 
+	position: absolute;
+	background: black;
+}
+
+.shogiboard-highlight1, .shogiboard-highlight2 {
+	/*box-shadow: inset 0 0 10px 2px rgba(0,0,0,0.5);
+	*/background-color:rgb(216, 169, 106);
+}
+
+.shogiboard-notation {
+	cursor: default;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	position: absolute;
+}
+
+.shogiboard-files {
+	font-weight: bold;
+	text-align: center;
+	font-family: monospace;
+	color: black;
+	position: relative;
+	top: -1.2em;
+}
+
+.shogiboard-ranks {
+	position: absolute;
+	top: 50%;
+	right: -1.65ex;
+	transform: translate(0, -50%);
+
+	font-weight: bold;
+	font-family: monospace;
+	color: black;
+}
+
+.shogiboard-numbers {
+	position: absolute;
+    top: 50%;
+    right: -1.65ex;
+    transform: translate(0, -50%);
+
+	font-weight: bold;
+	font-family: monospace;
+	color: black;
+}
+
+.shogiboard-spare-pieces {
+	clear: both;
+	text-align: center;
+}
+
+.shogiboard-hand-board {
+	box-shadow: 0px 3px 7px rgba(0,0,0,0.35);
+	background-color: rgb(245, 196, 123); /*#d29d5c;*/
+	box-sizing: border-box;
+}
+
+.shogiboard-hand-board .shogiboard-square {
+	border: none;
+}
